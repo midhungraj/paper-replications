@@ -26,3 +26,5 @@ ENV/
 env.bak/
 venv.bak/
 
+/cs231n/
+/cs231n/
