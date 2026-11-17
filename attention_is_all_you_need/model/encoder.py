@@ -4,6 +4,8 @@ from attention import MultiHeadAttension
 from feed_forward import PositionWiseFeedForaward
 from layer_norm import LayerNorm
 
+from transformer_embedding import TransformerEmbedding
+
 
 class EncoderLayer(nn.Module):
     def __init__(self, d_model, ffn_hidden, n_head, drop_prob):
