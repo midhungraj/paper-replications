@@ -51,9 +51,9 @@ class MultiHeadAttension(nn.Module):
 
     def split(self, tensor):
         batch_size, length, d_model = tensor.size()
-        d_tensor = d_model // self.n_head
+        d_head = d_model // self.n_head
 
-        tensor = tensor.view(batch_size, length, self.n_head, d_tensor).transpose(1, 2)
+        tensor = tensor.view(batch_size, length, self.n_head, d_head).transpose(1, 2)
         return tensor
 
     def concat(self, tensor):
